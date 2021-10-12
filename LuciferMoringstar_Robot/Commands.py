@@ -355,7 +355,7 @@ async def bot_info(bot, message):
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
     
 
-@trojanz.on_message((filters.private | filters.group) & filters.command('status'))
+@Client.on_message(filters.private & filters.command("status"))
 
 async def bot_status(client,message):
 
